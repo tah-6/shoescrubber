@@ -1,0 +1,14 @@
+{
+  "functions": {
+    "source": "packages/server",
+    "runtime": "nodejs20",
+    "main": "dist/index.js",
+    "predeploy": [
+      "cd packages/server && npm run build"
+    ]
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
+}
